@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <!-- Texto de boas-vindas -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem vindo,"
+        android:textSize="40sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:id="@+id/usuario_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="usuário!"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp" />
+
+    <!-- Botão Minhas ONGs -->
+
+    <!-- Botão Eventos -->
+
+    <!-- Botão Sair da conta -->
+    <Button
+        android:id="@+id/button_eventos"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/button_ongs"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Eventos"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button_ongs"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/welcome_text"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="169dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Minhas ONGs"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_eventos"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="122dp"
+        android:backgroundTint="@color/button_color"
+        android:text="Sair da conta"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

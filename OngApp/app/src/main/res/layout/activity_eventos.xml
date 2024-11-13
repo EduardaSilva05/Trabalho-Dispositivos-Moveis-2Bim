@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Botão de voltar -->
+    <ImageView
+        android:id="@+id/btn_voltarEventos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Back Button"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título "Eventos" -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Eventos"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Mês e Ano -->
+    <TextView
+        android:id="@+id/monthYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Outubro 2024"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Dias da Semana -->
+    <GridLayout
+        android:id="@+id/weekDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthYear">
+
+        <TextView android:text="Sun" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Mon" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Tue" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Wed" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Thu" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Fri" style="@style/CalendarDayHeader"/>
+        <TextView android:text="Sat" style="@style/CalendarDayHeader"/>
+    </GridLayout>
+
+    <!-- Calendário de Outubro de 2024 -->
+    <GridLayout
+        android:id="@+id/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:columnCount="7"
+        android:rowCount="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekDays">
+
+        <!-- Espaços vazios antes do dia 1º -->
+        <TextView style="@style/CalendarDayEmpty"/>
+        <TextView style="@style/CalendarDayEmpty"/>
+        <TextView style="@style/CalendarDayEmpty"/>
+        <TextView style="@style/CalendarDayEmpty"/>
+        <TextView style="@style/CalendarDayEmpty"/>
+        <TextView style="@style/CalendarDayEmpty"/>
+
+        <!-- Dias do mês de Outubro de 2024 -->
+        <TextView android:text="1" style="@style/CalendarDay"/>
+        <TextView android:text="2" style="@style/CalendarDay"/>
+        <TextView android:text="3" style="@style/CalendarDay"/>
+        <TextView android:text="4" style="@style/CalendarDay"/>
+        <TextView android:text="5" style="@style/CalendarDay"/>
+        <TextView android:text="6" style="@style/CalendarDay"/>
+        <TextView android:text="7" style="@style/CalendarDay"/>
+        <TextView android:text="8" style="@style/CalendarDayHighlighted"/>
+        <TextView android:text="9" style="@style/CalendarDay"/>
+        <TextView android:text="10" style="@style/CalendarDay"/>
+        <TextView android:text="11" style="@style/CalendarDay"/>
+        <TextView android:text="12" style="@style/CalendarDay"/>
+        <TextView android:text="13" style="@style/CalendarDay"/>
+        <TextView android:text="14" style="@style/CalendarDay"/>
+        <TextView android:text="15" style="@style/CalendarDayHighlighted"/>
+        <TextView android:text="16" style="@style/CalendarDay"/>
+        <TextView android:text="17" style="@style/CalendarDay"/>
+        <TextView android:text="18" style="@style/CalendarDay"/>
+        <TextView android:text="19" style="@style/CalendarDay"/>
+        <TextView android:text="20" style="@style/CalendarDay"/>
+        <TextView android:text="21" style="@style/CalendarDay"/>
+        <TextView android:text="22" style="@style/CalendarDay"/>
+        <TextView android:text="23" style="@style/CalendarDay"/>
+        <TextView android:text="24" style="@style/CalendarDay"/>
+        <TextView android:text="25" style="@style/CalendarDay"/>
+        <TextView android:text="26" style="@style/CalendarDay"/>
+        <TextView android:text="27" style="@style/CalendarDay"/>
+        <TextView android:text="28" style="@style/CalendarDay"/>
+        <TextView android:text="29" style="@style/CalendarDay"/>
+        <TextView android:text="30" style="@style/CalendarDay"/>
+        <TextView android:text="31" style="@style/CalendarDay"/>
+    </GridLayout>
+
+    <!-- Botão "Criar evento" -->
+    <Button
+        android:id="@+id/createEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#595959"
+        android:text="Criar evento"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar" />
+
+    <!-- Exemplo de eventos -->
+    <TextView
+        android:id="@+id/event1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" • 8 de Outubro - 10:30\nCampanhas de Doação\nLocal: Madaly"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createEventButton" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="590dp" />
+
+    <TextView
+        android:id="@+id/event2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text=" • 15 de Outubro - 15:00\nPalestra\nLocal: UNIPAR"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
